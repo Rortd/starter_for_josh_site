@@ -26,42 +26,46 @@ wp_reset_query();?>
     <section class="container-fluid ">
         <div class="container">
             <div class="row"><!--  a row that gives us access to the BS columns-->
-                       <div class="article-title text-center">
+                <div class="article-title text-center">
                     <h3>LATEST ARTICLES</h3>
                 </div>
-                <div class="col-md-4 article-cent">
-                    
+               <div class="col-md-4 article-cent">
+                   
 <?php $post_id = 15;
 $queried_post = get_post($post_id);?>
 <?php echo get_the_post_thumbnail($queried_post, 'full', array('class' => 'img-responsive')); ?>
 <h4><?php echo $queried_post->post_title; ?></h4>
 <?php echo $queried_post->post_excerpt; ?>
 <?php echo '<a class="readmore" href="'.get_permalink($queried_post).'"><br>CONTINUE READING</a>';?>                       
-
+ 
                 </div>
-                <div class="col-md-4 article-cent">
+           
+     <div class="col-md-4 article-cent">
+                                      
 <?php $post_id = 17;
 $queried_post = get_post($post_id);?>
 <?php echo get_the_post_thumbnail($queried_post, 'full', array('class' => 'img-responsive')); ?>
 <h4><?php echo $queried_post->post_title; ?></h4>
 <?php echo $queried_post->post_excerpt; ?>
 <?php echo '<a class="readmore" href="'.get_permalink($queried_post).'"><br>CONTINUE READING</a>';?>                 
-
-                </div>
-                <div class="col-md-4 article-cent">
+              
+  </div>
+  <div class="col-md-4 article-cent">
+                                        
 <?php $post_id = 19;
 $queried_post = get_post($post_id);?>
 <?php echo get_the_post_thumbnail($queried_post, 'full', array('class' => 'img-responsive')); ?>
 <h4><?php echo $queried_post->post_title; ?></h4>
 <?php echo $queried_post->post_excerpt; ?>
 <?php echo '<a class="readmore" href="'.get_permalink($queried_post).'"><br>CONTINUE READING</a>';?>     
-
-                </div>
                 
-                    </div><!-- row-->
-            </div><!-- container-->
+   </div>  
+
+</div><!-- row-->
+</div><!-- container-->
         
     </section><!-- container-fluid-->
+
 
 
 <?php get_footer(); /* Tells WordPress to include footer.php */ ?>
